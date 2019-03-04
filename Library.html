@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Central Library IIT Indore</title>
+  	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body
+		{
+			width: 96%;
+			margin-right:2%;
+			margin-left:2%;
+		}
+		a{
+			text-decoration: none;
+		}
+		.navbar
+		{
+			clear: both;
+			height: 40px;
+			background-color: black;
+			
+		}
+		.navbar ul
+		{
+			list-style: none;
+			padding-left: 10px;
+			width: 100%;
+		}
+		.navbar ul li a
+		{
+			display: block;
+			text-decoration: none;
+			font-family: 'Sofia';
+			font-size: 20px;
+			color: white;
+			padding: 0px 2.5px;
+		}
+		.navbar ul li a:hover
+		{
+			background-color: grey;
+			border-radius: 15px;
+			/*height: 30px;*/
+		}
+		.navbar ul li
+		{
+			float: left;
+			position: relative;
+			padding: 5px 9px;
+		}
+		.navbar ul li:hover ul
+		{
+			display: block;
+		}
+		.navbar ul li ul
+		{
+			margin-left:0;
+			padding-left:0;
+			padding-top: 10px;
+			z-index: 1; 
+			display: none;
+			background-color: black;
+			position: absolute;
+			border-radius: 0px 0px 40px 40px;
+		}
+		
+		.navbar ul li ul li
+		{
+			clear: both;
+			padding:2px 10px;
+		}
+		.navbar ul li ul li a
+		{
+			display: block;
+			text-decoration: none;
+			font-family: 'Sofia';
+			font-size: 18px;
+			color: white;
+			padding: 0px 10px;
+		}
+		.navbar ul li ul li:hover a
+		{
+			background-color: grey;
+			border-radius: 20px;
+		}
+		.w3-content img
+		{
+			height: 320px;
+			border-radius: 50px;
+		}
+		.w3-content
+		{
+			float: left;
+			width: 65%;
+			margin: 10px 0%;
+			border: 2px solid black;
+			background-color: #696969;
+		}
+		.banner
+	    {
+	      width: 32%;
+	      float:right;
+	      margin-top: 0px;
+	      height: 333px;
+	      overflow: hidden;
+	      border-bottom: 2px solid black;
+	    }
+	    .heading
+	    {
+	      color: white;
+	      background-color:grey;
+	      font-family: sans-serif;
+	      text-align: center;
+	    }
+	    .banner marquee h3
+	    {
+	      background-color: grey;
+	      font-size: 125%;
+	      color: white;
+	    }
+	    .banner marquee h3 a:hover
+	    {
+	    	text-decoration: underline;
+	    }
+	    .banner marquee
+	    {
+	    	font-size: 85%;
+	    }
+	     .search-box img
+	    {
+	        width: 50px;
+	        height: 50px;
+	        border-radius: 25px;
+	        float: left;
+	    }
+	    .search-box
+	    {
+	        clear: both;
+	        /*background-color: grey;*/
+	        height: 50px;
+	        padding: 20px 20px;
+	    }
+	    .search input
+	    {
+	        padding-right: 100px;
+	       
+	        border: none;
+	        font-size: 125%;
+	    }
+	    .search
+	    {
+	      margin-top: 0px;
+	      margin-left: 20px;
+	      float: left;
+	      border-radius: 25px;
+	      border:10px solid white;
+	    }
+	    #sub
+	    {
+	      margin-top: 5px;
+	      margin-left: 20px;
+	      float: left;
+	      border-radius: 25px;
+	    }
+	    #sub input
+	    {
+	      border-radius: 25px;
+	      height: 40px;
+	      width: 80px;
+	    }
+	    .find-section
+	    {
+		    clear: both;
+		    width: 65%;
+		    background-color: grey;
+		    border-radius: 25px;
+	    }
+	    .advanced-search a:hover
+	    {
+	    	text-decoration: underline;
+	    }
+	    #Economics
+	    {
+	        width: 32%;
+	        float:right;
+	        height: 135px;
+
+	        margin-top: -135px;
+	        border-bottom: 2px solid black;
+	    }
+	    #Economics div h3
+	    {
+	        background-color: grey;
+	        font-size: 125%;
+	        color: white;
+	        padding-left: 10px;
+	    }
+	    #Economics div
+	    {
+	        font-size: 85%;
+	    }
+	     #Economics div h3 a:hover
+	    {
+	     	text-decoration: underline;
+	    }
+	     .footer
+        {
+          width:65.5%;
+          margin-left: 0%;
+          padding-bottom: 1px;
+          margin-top: 20px;
+        }
+        .footer-item
+        {
+            width:33%;
+            float:left;
+            /*margin-right: 20px;*/
+            border: 2px solid grey;
+            border-radius: 150px;
+            margin-bottom: 15px;
+            height:210px;
+            text-align: center;
+            font-family: sans-serif;
+            /*box-shadow: 0 0 5px #FF0000, 0 0 7px #0000FF, 10px 10px 10px #000000;*/
+            background-color: #A9A9A9;
+        }
+        .footer-item ul
+        {
+          list-style: none;
+          padding-left: 0;
+        }
+        .footer-item h4
+        {
+          width: 75%;
+          margin-left: 12.5%;
+          border-bottom: 2px solid white;
+        }
+        .footer a:hover
+        {
+        	text-decoration: underline;
+        }
+        .research
+      	{
+        	clear: both;
+        	width: 65%;
+     	}
+      	.research-container
+      	{
+        	height: 290px;
+        	border: 3px solid black;
+        	overflow-y: scroll;
+      	}
+      	.research-container p 
+      	{
+	        margin-top: -10px;
+	        padding-left: 3px;
+	        font-size: 90%;
+      	}
+      	.research-container h5
+      	{
+	        margin-top: -5px;
+	        padding-left: 3px;
+      	}
+      	.research-container h5 a
+      	{
+	        color: blue;
+      	}
+      	.research-container h5 a:hover
+      	{
+      		text-decoration: underline;
+      	}
+      	#submission:hover
+      	{
+      		text-decoration: underline;
+      	}
+      	#last a:hover
+      	{
+      		text-decoration: underline;
+      	}
+	</style>
+</head>
+<body>
+	<div class="top-section">
+		<img src="images/graduationhat.png" alt="logo" height="100" style="margin-right: 2%; width: 10%; float: left;">
+		<img src="images/centrallibrary.png" alt="cl" height="100" style="width: 88%; float: left;" >
+	</div>
+	<div class="navbar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About<span style="font-size: 13px;">&#x25BC</span></a>
+				<ul style="width: 200px;">
+					<li><a href="#">Library Collection</a></li>
+					<li><a href="#">Library Team</a></li>
+					<li><a href="#">Opening Hours</a></li>
+					<li><a href="#">Rules & Regulations</a></li>
+					<li style="padding-bottom: 12px;"><a href="#">Library Brochure</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Services<span style="font-size: 13px;">&#x25BC</span></a>
+				<ul style="width: 200px;">
+					<li><a href="#">General Services</a></li>
+					<li><a href="#">New Arrivals</a></li>
+					<li><a href="#">RemoteXS</a></li>
+					<li><a href="#">Grammarly</a></li>
+					<li><a href="#">Turnitin</a></li>
+					<li><a href="#">Trial Access</a></li>
+					<li style="padding-bottom: 12px;"><a href="#">QR Codes</a></li>
+
+				</ul>
+			</li>
+			<li><a href="#">OPAC</a></li>
+			<li><a href="#">InstitutionalRepository</a></li>
+			<li><a href="#">E-Resources<span style="font-size: 13px;">&#x25BC</span></a>
+				<ul style="width: 325px;">
+					<li><a href="#">E-Books</a></li>
+					<li><a href="#">E-Databases</a></li>
+					<li><a href="#">E-Journals</a></li>
+					<li><a href="#">E-resources by ESS</a></li>
+					<li><a href="#">Open Educational Resources</a></li>
+					<li><a href="#">E-Journals Archives</a></li>
+					<li><a href="#">NDL@IITKGP</a></li>
+					<li><a href="#">List of E-Journals(Publisher wise)</a></li>
+					<li><a href="#">E-resources Usage Policy</a></li>
+					<li style="padding-bottom: 12px;"><a href="#">Union Catalogue of E-Resources</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">What's New</a></li>
+			<li><a href="#">Downloads</a></li>
+			<li><a href="#">Guides</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</div>
+	<div class="w3-content w3-display-container">
+		 <img class="mySlides" src="images/readingarea.jpg" style="width:100%;">
+		 <img class="mySlides" src="images/readingarea1.jpg" style="width:100%">
+		 <img class="mySlides" src="images/stackarea.jpg" style="width:100%">
+		 <img class="mySlides" src="images/computerfacility.jpg" style="width:100%">
+		 <img class="mySlides" src="images/upcominglibrarybuilding.jpg" style="width:100%">
+		 <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <div class="banner">
+        <div class="heading">
+            <h3 style="font-size: 120%;">Latest Updates</h3>
+        </div>
+        <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+        <div>
+            <h3><a href="#">Events</a></h3>
+            <p>Training session for Grammarly</p>
+            <h3><a href="#">Children's Collection</a></h3>
+            <p>OPAC Link for Children's Collection Books</p>
+            <h3><a href="#">Trial Access</a></h3>
+            <p>IOP Journals</p>
+            <h3><a href="#">Children's Collection</a></h3>
+            <p>Inauguration of Children’s Library Collection on 2nd April 2018</p>
+            <h3><a href="#">Notice</a></h3>
+            <p>All the users are requested to check their library account after every transaction.If there is any discrepancy found, they should report it to the counter staff same day/next working day before closing of the counter.</p>
+        </div>  
+        </marquee>
+    </div>
+    <div class="find-section">
+        <div class="search-box">
+            <img src="images/books.png" alt="books">
+            <div class="search"><input type="text" name="textbox" placeholder="   Search for Books"></div>
+            <div id="sub"><input type="submit" name="submit"></div>
+        </div>
+        <div class="advanced-search" style="clear: both; padding-left: 120px; padding-bottom: 1px; padding-top: 2px;"><h4><a href="#" style="color: white;">Advanced Search</a></h4></div>
+    </div>
+    <div class="banner" id="Economics">
+        <div class="heading">
+            <h3 style="font-size: 130%; color: black; font-weight: 500; padding-left: 0px;">Economics Databases</h3>
+        </div>
+        <div>
+            <h3><a href="#">CMIE Commodities</a></h3>
+            <h3><a href="#">CMIE ProwessIQ</a></h3>
+            <h3><a href="#">CMIE States of India</a></h3>
+        </div>  
+    </div>
+    <h3 style="clear: both;font-family: cursive;float: left; margin:10px 0px;" id="last"><a href="#">e-Books@Central Library</a></h3>
+    <div class="footer" style="clear: both;">
+        
+            <div class="footer-item">
+                
+                <h4>Fulltext Databases</h4>
+                <ul>
+                  <li><a href="#">ACS</a>  | <a href="#"> ACM</a> | <a href=""> ASME</a></li>
+                  <li><a href="#">IEEE Xplore Digital Library</a></li>
+                  <li><a href="#">JSTOR</a>  | <a href="#">RSC</a> | <a href=""> SIAM</a></li>
+                  <li><a href="#">Science Direct</a></li>
+                  <li><a href="#">Springer Link</a></li>
+                  <li><a href="#">Taylor & Francis Journals</a></li>
+                  
+                </ul>
+            </div>
+            <div class="footer-item">
+                
+                <h4 style="font-size: 110%; font-weight: 440; padding-top: 8px;">Bibliographic Databases</h4>
+                <ul>
+                  <li><a href="#">MathSciNet</a></li>
+                  <li><a href="#">MLA International </a></li>
+                  <li><a href="#">Bibliography</a></li>
+                  <li><a href="#">SciFinder Scholar</a></li>
+                  <li><a href="#">Scopus</a></li>
+                  <li><a href="#">Web of Science</a></li>
+                  
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>Quick Links</h4>
+                <ul>
+                <li><a href="#">IITI Home</a></li>
+                  <li><a href="#">OPAC Search</a></li>
+                  <li><a href="#">IDR@IITI</a></li>
+                  <li><a href="#">E-resources@ESS</a></li>
+                  <li><a href="#">Scopus</a></li>
+                  <li><a href="#">National Digital Library</a></li>
+                  </ul>
+            </div>
+    </div>
+    <div class="research">
+        <div style="background-color: darkgrey; height: 40px; border-radius: 50px; text-align: center; margin-bottom: 5px;"><h3 style="text-shadow: 10px 5px 50px black; color: white; padding-top: 0px;">Recent Publications @ IIT Indore</h3></div>
+        <div class="research-container">
+            <h5 style="padding-top: 15px;"><a href="#">Oxygen and cerium defects mediated changes in structural, optical and photoluminescence properties of Ni substituted CeO2</a></h5>
+            <p>2019; Journal of Alloys and Compounds; Tiwari, S. | Rathore, G. | Patra, N. | Yadav, A.K. | Bhattacharya, D. |...</p>
+            <h5><a href="#">Ear biometrics recognition using laser biospeckled fringe projection profilometry </a></h5>
+            <p>2019; Optics and Laser Technology; Chatterjee, A. | Singh, P. | Bhatia, V. | Prakash, S.</p>
+            <h5><a href="#">Proposition of modified convection boundedness criterion and its evaluation for the development of bounded schemes</a></h5>
+            <p>2019; Applied Mathematics and Computation; Chourushi, T.</p>
+            <h5><a href="#">Automated classification of hand movements using tunable-Q wavelet transform based filter-bank with surface electromyogram signals </a></h5>
+            <p>2019; Future Generation Computer Systems; Nishad, A. | Upadhyay, A. | Pachori, R.B. | Acharya, U.R.</p>
+            <h5><a href="#">Impact of different morphologies of CoFe2O4 nanoparticles for tuning of structural, optical and magnetic properties</a></h5>
+            <p>2019; Journal of Alloys and Compounds; Kumar, Y. | Sharma, A. | Shirage, P.M.</p>
+            <h5><a href="#">Controlling porosity and ultraviolet photoresponse of crystallographically oriented ZnO nanostructures grown by pulsed laser deposition</a></h5>
+            <p>2019; Scripta Materialia; Soni, A. | Mavani, K.R.</p>
+            <h5><a href="#">LiSnZr(PO4)3: NASICON-type solid electrolyte with excellent room temperature Li+ conductivity (Cited 1 time(s))</a></h5>
+            <p>2019; Journal of Alloys and Compounds; Pareek, T. | Dwivedi, S. | Singh, B. | Kumar, D. | Kumar, P. |...</p>
+            <h5><a href="#">Shape memory effect, temperature distribution and mechanical properties of friction stir welded nitinol </a></h5>
+            <p>2019; Journal of Alloys and Compounds; Prabu, S.S.M. | Madhu, H.C. | Perugu, C.S. | Akash, K. | Mithun, R. |...</p>
+            <h5><a href="#">Redox additive enhanced capacitance: Multi-walled carbon nanotubes/polyaniline nanocomposite based symmetric supercapacitors for rapid charge storage </a></h5>
+            <p>2019; Applied Surface Science; Potphode, D.D. | Sinha, L. | Shirage, P.M.</p>
+            <h5><a href="#">High speed optical modulator based on silicon slotted-rib waveguide</a></h5>
+            <p>2019; Optics Communications; Jain, S. | Rajput, S. | Kaushik, V. | Kumar, M.</p>
+            <h5><a href="#">Substituent dependent sensing behavior of Schiff base chemosensors in detecting Zn2+and Al3+ ions: Drug sample analysis and living cell imaging </a></h5>
+            <p>2019; Sensors and Actuators, B: Chemical; Kundu, B.K. | Mandal, P. | Mukhopadhyay, B.G. | Tiwari, R. | Nayak, D. |...</p>
+            <h5><a href="#">A computational study of electrocatalytic CO2 reduction by Mn(I) complexes: Role of bipyridine substituents </a></h5>
+            <p>2019; Electrochimica Acta; Rawat, K.S. | Mandal, S.C. | Pathak, B.</p>
+            <h5><a href="#">Characterization of permanent axial strain of granular materials subjected to cyclic loading based on shakedown theory </a></h5>
+            <p>2019; Construction and Building Materials; Chen, W.-B. | Feng, W.-Q. | Yin, J.-H. | Borana, L. | Chen, R.-P.</p>
+            <h5><a href="#">Excitation wavelength based reversible multicolour photoluminescence by a single chromophore upon aggregation: Detection of picric acid-application in bioimaging </a></h5>
+            <p>2019; Sensors and Actuators, B: Chemical; Kaur, I. | Sharma, V. | Mobin, S.M. | Kaur, P. | Singh, K.</p>
+            <h5><a href="#">Molecular recognition of double-stranded DNA by a synthetic, homoaromatic tripeptide (YYY): The spectroscopic and calorimetric study </a></h5>
+            <p>2019; International Journal of Biological Macromolecules; Biswas, S. | Samui, S. | Biswas, S. | Das, A.K. | Naskar, J. </p>
+            <h5><a href="#">Role of oxygen vacancies in Co/Ni Substituted CeO2: A comparative study</a></h5>
+            <p>2019; Ceramics International; Tiwari, S. | Khatun, N. | Patra, N. | Yadav, A.K. | Bhattacharya, D. |...</p>
+            <h5><a href="#">A 3D mesoporous flowers of nickel carbonate hydroxide hydrate for high-performance electrochemical energy storage application </a></h5>
+            <p>2019; Electrochimica Acta; Bhojane, P. | Sinha, L. | Goutam, U.K. | Shirage, P.M.</p>
+            <h5><a href="#">Sustainable utilisation of ceramic waste in concrete: Exposure to adverse conditions </a></h5>
+            <p>2019; Journal of Cleaner Production; Siddique, S. | Chaudhary, S. | Shrivastava, S. | Gupta, T.</p>
+            <h5><a href="#">Direct photon elliptic flow in Pb–Pb collisions at sNN=2.76 TeV </a></h5>
+            <p>2019; Physics Letters, Section B: Nuclear, Elementary Particle and High-Energy Physics; Acharya, S. | Acosta, F.T. | Adamová, D. | Adolfsson, J. | Aggarwal, M.M. |...</p>
+            <h5><a href="#">A near maximum likelihood performance modified firefly algorithm for large MIMO detection </a></h5>
+            <p>2019; Swarm and Evolutionary Computation; Datta, A. | Bhatia, V.</p>
+            <h5><a href="#">Access all results for your search in Scopus</a></h5>
+        </div>
+    </div>
+    <div class="banner" id="Economics" style="clear:both; margin-top: -560px;">
+        <div class="heading">
+            <h3 style="font-size: 130%; color: black; font-weight: 500; padding-left: 0px;">Research Support Tools</h3>
+        </div>
+        <div>
+            <h3><a href="#">Turnitin</a></h3>
+            <h3><a href="#">Grammarly</a></h3>
+            <h3><a href="#">RemoteXS</a></h3>
+        </div>  
+    </div>
+    <div class="banner" style="border: 2px solid black; height: 30px; background-color: grey; margin-top: -370px;"><img src="http://library.iiti.ac.in/wp-includes/images/rss.png" height="30" width="30" style="float: left;"><h4 style="float: left; padding-top: 0px; margin-top: -4px; padding-left: 5px;"><a href="#" id="submission">Research Submissions @ IDR</a></h4></div>
+    <div class="banner" id="Economics" style="clear:both; margin-top: -270px; height: auto;">
+        <div class="heading">
+            <h3 style="font-size: 150%; color: black; font-weight: 500; padding-left: 0px;">Library at a Glance</h3>
+        </div>
+        <table style="padding-left: 15%;">
+			<tbody>
+				<tr>
+					<td width="211"><span style="color: #004488;"><strong>Books</strong></span></td>
+					<td width="90"><span style="color: #004488;"><strong>34492+</strong></span></td>
+				</tr>
+				<tr>
+					<td width="211"><span style="color: #004488;"><strong>News Papers</strong></span></td>
+					<td width="90"><span style="color: #004488;"><strong>10</strong></span></td>
+				</tr>
+				<tr>
+					<td width="211"><span style="color: #004488;"><strong>Theses and Dissertations</strong></span></td>
+					<td width="90"><span style="color: #004488;"><strong>332+</strong></span></td>
+				</tr>
+				<tr>
+					<td width="211"><span style="color: #004488;"><strong>E-Books</strong></span></td>
+					<td width="90"><span style="color: #004488;"><strong>7600+</strong></span></td>
+				</tr>
+				<tr>
+					<td width="211"><span style="color: #004488;"><strong>E-Journals</strong></span></td>
+					<td width="90"><span style="color: #004488;"><strong>7600+</strong></span></td>
+				</tr>
+				<tr>
+					<td width="211"><span style="color: #004488;"><strong>Magazines</strong></span></td>
+					<td width="90"><span style="color: #004488;"><strong>25</strong></span></td>
+				</tr>
+			</tbody>
+		</table>  
+    </div>
+    <h5 style="clear: both;font-family: cursive;float: right; margin-bottom: 15px;" id="last">Powered by<a href="#">Wordpress</a> and <a href="">Smartline</a></h5>
+    <script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</body>
+</html>
